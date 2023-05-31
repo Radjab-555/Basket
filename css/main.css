@@ -87,8 +87,29 @@ header .shopping span {
 .list .item {
   text-align: center;
 }
-
-.
-
-
+.active .container {
+  transform: translateX(-200px);
+}
+.list .item {
+  text-align: center;
+  background-color: rgb(185, 192, 198);
+  padding: 20px;
+  box-shadow: 0 59px 50px #453e3b;
+  letter-spacing: 1px;
+}
+.list .item img {
+  width: 80%;
+}
+.list .item .title {
+  font-weight: 600;
+}
+.list .item .price {
+  margin: 10px;
+}
+.list .item button {
+  background-color: black;
+  color: #fff;
+  padding: 10px;
+  width: 100%;
+}
 
