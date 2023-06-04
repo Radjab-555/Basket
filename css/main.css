@@ -11,6 +11,7 @@ header {
   display: grid;
   grid-template-columns: 1fr 50px;
   margin-top: 50px;
+  align-items: center;
 }
 header .shopping {
   position: relative;
@@ -35,7 +36,7 @@ header .shopping span {
   row-gap: 30px;
   margin-top: 50px;
 }
-.checkout {
+.checkOut {
   display: flex;
 }
 
@@ -57,14 +58,14 @@ header .shopping span {
   display: flex;
   align-items: center;
 }
-.card .checkout {
+.card .checkOut {
   position: absolute;
   bottom: 0;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 } 
-.card .checkout div{
+.card .checkOut div{
   background-color: gold;
   width: 100%;
   height: 50px;
@@ -74,7 +75,7 @@ header .shopping span {
   font-weight: bold;
   cursor: pointer;
 }
-.card .checkout div:nth-child(2) {
+.card .checkOut div:nth-child(2) {
   background-color: midnightblue;
   color: aliceblue;
 }
@@ -112,4 +113,26 @@ header .shopping span {
   padding: 10px;
   width: 100%;
 }
-
+.listCard  li {
+  display: grid;
+  grid-template-columns: 100px repeat(3, 1fr);
+  color: #fff;
+  row-gap: 10px;
+  margin-bottom: 20px;
+}
+.listCard li div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.listCard li img {
+  width: 90%;
+}
+.listCard button {
+  width: auto;
+  background-color: #727272;
+  border: none;
+}
+.listCard .count {
+  margin: 0 10px;
+}

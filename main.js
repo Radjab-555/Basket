@@ -54,7 +54,7 @@ let products = [
 
 let listCards = [];
 function initApp() {
-  products.forEach((value, key) => {
+  products.forEach((value, key) =>{
     let newDiv = document.createElement('div');
     newDiv.classList.add('item');
     newDiv.innerHTML = `
@@ -72,7 +72,7 @@ function addToCard (key) {
     listCards[key] = products[key];
     listCards[key].quantity = 1;
   }
-  addToCard();
+  reloadCard();
 }
 
 function reloadCard (){
@@ -89,11 +89,10 @@ function reloadCard (){
       <div><img src="image/${value.Image}"/></div>
       <div>${value.name}</div>
       <div>${value.price.toLocaleString()}</div>
-      <div>${value.quantity}</div>
       <div>
-          <button onclick="changeQuantity(${key, value.quantity - 1})">-</button>
-          <div class=""count>${value.quantity}</div>
-          <button onclick="changeQuantity(${key, value.quantity + 1})">+</button>
+          <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+          <div class="count">${value.quantity}</div>
+          <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
       </div>
       `;
       listCard.appendChild(newDiv);
@@ -103,3 +102,13 @@ function reloadCard (){
   quantity.innerText = count;
 }
 // reloadCard ();
+
+function changeQuantity(key, quantity) {
+  if (quantity == 0) {
+    delete listCards[key];
+  }else{
+    listCards[key].quantity = quantity;
+    listCards[key]. price = quantity * products[key].price;
+  }
+  reloadCard();
+}
